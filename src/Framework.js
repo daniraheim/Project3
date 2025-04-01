@@ -8,7 +8,7 @@ function Framework({children}) {
             <nav aria-label="Main Navigation">
                 <Link className="btn btn-primary me-2" to="/">List</Link>
                 <Link className="btn btn-success me-2" to="/add">Add New</Link>
-                <Link className="btn btn-info me-2" to="/contact">Contact Us</Link>
+                <Link className="btn btn-info me-2" to="/contact">Contact</Link>
             </nav>
             {children}
         </div>
