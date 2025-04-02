@@ -23,12 +23,18 @@ function addTask(task) {
   setTasks ([...tasks, newTask]);
 }
 
+function deleteTask(task) {
+  setTasks(tasks.filter((task) => task.id != id))
+}
+
+
+
   return (
     <Router>
        <Framework>
           <Routes>
 
-            <Route path="/" element={ <TaskItems tasks={tasks}  /> } />
+            <Route path="/" element={ <TaskItems tasks={tasks} onDelete={deleteTask} /> } />
 
             <Route path="/add" element={ <AddTask onAdd={addTask} /> } />
 
