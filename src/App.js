@@ -27,6 +27,10 @@ function deleteTask(task) {
   setTasks(tasks.filter((task) => task.id != id))
 }
 
+function updateTask(updated) {
+  setTasks(tasks.map((task) => task.id === updated.id ? updated : task))
+}
+
 
 
   return (
@@ -37,6 +41,8 @@ function deleteTask(task) {
             <Route path="/" element={ <TaskItems tasks={tasks} onDelete={deleteTask} /> } />
 
             <Route path="/add" element={ <AddTask onAdd={addTask} /> } />
+
+            <Route path="/edit/:id" element={ <EditTask tasks={tasks} onUpdate={updateTask} /> } />
 
             <Route path="/contact"/>
      
