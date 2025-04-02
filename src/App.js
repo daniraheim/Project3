@@ -15,7 +15,7 @@ function App() {
     {id: 2, title: "Apartment", description: "clean the apartment", status: false},
     {id: 3, title: "Project", description: "code new project", status: false},
     {id: 4, title: "Groceries", description: "pick up groceries", status: false},
-    {id: 4, title: "Presentation", description: "complete budget presentation", status: false}
+    {id: 5, title: "Presentation", description: "complete budget presentation", status: false}
   ])
 
   const [contacts, setContact] = useState ([
