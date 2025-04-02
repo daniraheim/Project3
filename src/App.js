@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TaskItems from './TaskItems';
 import AddTask from './AddTask';
+import EditTask from './EditTask';
 import './App.css';
 
 function App() {
@@ -23,7 +24,7 @@ function addTask(task) {
   setTasks ([...tasks, newTask]);
 }
 
-function deleteTask(task) {
+function deleteTask(id) {
   setTasks(tasks.filter((task) => task.id != id))
 }
 
