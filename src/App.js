@@ -31,8 +31,6 @@ function updateTask(updated) {
   setTasks(tasks.map((task) => task.id === updated.id ? updated : task))
 }
 
-
-
   return (
     <Router>
        <Framework>
