@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import TaskItems from './TaskItems';
 import AddTask from './AddTask';
 import EditTask from './EditTask';
+import NewContact from './NewContact';
 import './App.css';
 
 function App() {
@@ -15,13 +16,20 @@ function App() {
     {id: 3, title: "Project", description: "code new project", status: false},
     {id: 4, title: "Groceries", description: "pick up groceries", status: false},
     {id: 4, title: "Presentation", description: "complete budget presentation", status: false}
+  ])
 
-
+  const [contacts, setContact] = useState ([
+    {id: 1, firstName: "", lastName: "", email: "", comments: ""}
   ])
 
 function addTask(task) {
   const newTask = {...task, id: Date.now()};
   setTasks ([...tasks, newTask]);
+}
+
+function addContact(contact) {
+  const newContact = {...contact, id: Date.now()};
+  setContact ([...contacts, newContact]);
 }
 
 function deleteTask(id) {
@@ -43,7 +51,7 @@ function updateTask(updated) {
 
             <Route path="/edit/:id" element={ <EditTask tasks={tasks} onUpdate={updateTask} /> } />
 
-            <Route path="/contact"/>
+            <Route path="/contact" element={ <NewContact onNew={addContact} /> } />
      
           </Routes>
         </Framework>

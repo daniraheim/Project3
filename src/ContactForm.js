@@ -29,7 +29,7 @@ function ContactForm({ initialData , onSubmit}) {
             <label className="form-label">Last Name:</label>
             <input
               type="text"
-              name="firstLast"
+              name="lastName"
               className="form-control"
               value={formData.lastName}
               onChange={handleChange}
