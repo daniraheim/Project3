@@ -68,7 +68,7 @@ function deleteTask(id) {
 
 function updateTask(updated) {
   setTasks(tasks.map((task) => task.id === updated.id ? updated : task))
-  const updatedTasks = tasks.filter((task) => task.id !== id);
+  const updatedTasks = tasks.map((task) => task.id === updated.id ? updated : task);
   setTasks(updatedTasks);
   store.dispatch({ type: 'SET_TASKS', payload: updatedTasks });
 }
