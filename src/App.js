@@ -46,10 +46,8 @@ function App() {
 function addTask(task) {
   const newTask = {...task, id: Date.now()};
   const updatedTasks = [...tasks, newTask];
-    setTasks(updatedTasks);
-    store.dispatch({ type: 'SET_TASKS', payload: updatedTasks });
-
- 
+  setTasks(updatedTasks);
+  store.dispatch({ type: 'SET_TASKS', payload: updatedTasks });
 }
 
 function addContact(contact) {

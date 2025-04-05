@@ -20,9 +20,9 @@ function TaskItems({tasks , onDelete})
         </div>
       
         <div className="table-responsive mt-4">
-          <table className="table table-bordered">
+          <table className="table table-bordered table-info">
             <thead className="table-dark">
-              <tr>
+              <tr className="table-warning">
                 <th>Task</th>
                 <th>Description</th>
                 <th>Status</th>
@@ -37,7 +37,7 @@ function TaskItems({tasks , onDelete})
                   <td>{task.status == true ? "Completed" : "Unfinished"}</td>
                   <td>
                     <Link className="btn btn-warning btn-sm me-2" to={`/edit/${task.id}`}>Edit</Link>
-                    <button className="btn btn-danger btn-sm" onClick={() => onDelete(task.id)}>Delete</button>
+                    <button className="btn btn-dark btn-sm" onClick={() => onDelete(task.id)}>Delete</button>
                   </td>
                 </tr>
               ))}

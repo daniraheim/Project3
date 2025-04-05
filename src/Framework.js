@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Framework({children}) {
     return(
-        <div className="container mt-4">
+        <div className="container mt-4 framework">
             <h1 className="text-center mb-4">To-Do List</h1>
             <nav aria-label="Main Navigation">
                 <Link className="btn btn-primary me-2" to="/">List</Link>

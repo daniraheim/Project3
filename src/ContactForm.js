@@ -13,7 +13,7 @@ function ContactForm({ initialData , onSubmit}) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form action="https://formspree.io/f/xeoapjay" method="POST" onSubmit={handleSubmit}>
           <div className="mb-3">
             <label className="form-label">First Name:</label>
             <input

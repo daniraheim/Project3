@@ -8,6 +8,8 @@ function NewContact ({ onNew }) {
     function handleContact (newContact) {
         onNew(newContact);
         navigate("/contact");
+        navigate("/");
+
     }
 
     return <ContactForm 
