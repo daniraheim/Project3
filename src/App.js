@@ -41,7 +41,7 @@ function App() {
 
   const [contacts, setContact] = useState ([
     {id: 1, firstName: "", lastName: "", email: "", comments: ""}
-  ])
+  ]);
 
 function addTask(task) {
   const newTask = {...task, id: Date.now()};
@@ -58,7 +58,7 @@ function addContact(contact) {
 }
 
 function deleteTask(id) {
-  setTasks(tasks.filter((task) => task.id != id))
+  setTasks(tasks.filter((task) => task.id !== id))
   const updatedTasks = tasks.filter((task) => task.id !== id);
   setTasks(updatedTasks);
   store.dispatch({ type: 'SET_TASKS', payload: updatedTasks })

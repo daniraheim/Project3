@@ -6,7 +6,7 @@ function TaskItems({tasks , onDelete})
   const [filterStatus , setFilterStatus] = useState('All');
 
   const filteredTasks = tasks.filter(task => {
-    return (filterStatus == 'All' || (filterStatus == 'Completed' && task.status) || (filterStatus == 'Unfinished' && !task.status))
+    return (filterStatus === 'All' || (filterStatus === 'Completed' && task.status) || (filterStatus === 'Unfinished' && !task.status))
  });
 
     return (
@@ -34,7 +34,7 @@ function TaskItems({tasks , onDelete})
                 <tr key={task.id}>
                   <td>{task.title}</td>
                   <td>{task.description}</td>
-                  <td>{task.status == true ? "Completed" : "Unfinished"}</td>
+                  <td>{task.status === true ? "Completed" : "Unfinished"}</td>
                   <td>
                     <Link className="btn btn-warning btn-sm me-2" to={`/edit/${task.id}`}>Edit</Link>
                     <button className="btn btn-dark btn-sm" onClick={() => onDelete(task.id)}>Delete</button>
