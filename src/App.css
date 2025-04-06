@@ -7,13 +7,17 @@ h1 {
     font-weight: bolder;
 }
 
-th {
-    color: indigo;
+body {
+    background-color:aqua;
+    margin: 35px 0px;
 }
 
-body {
-    background-color:aqua
+.save-button {
+   display: block;
+   margin: 0 auto;
 }
+
+
 
 
 

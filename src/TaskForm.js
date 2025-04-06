@@ -21,7 +21,7 @@ function TaskForm({ initialData , onSubmit})
     return (
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label className="form-label">Task</label>
+            <label className="fs-5 fw-bold form-label">Task</label>
             <input
               type="text"
               name="title"
@@ -32,7 +32,7 @@ function TaskForm({ initialData , onSubmit})
             />
           </div>
           <div className="mb-3">
-            <label className="form-label">Description</label>
+            <label className="fs-5 fw-bold form-label">Description</label>
             <input
               type="text"
               name="description"
@@ -48,9 +48,11 @@ function TaskForm({ initialData , onSubmit})
               checked={formData.status}
               onChange={handleStatusChange}
               />
-              <label className="form-check-label">Completed</label>
+              <label className="fs-5 fw-bold form-check-label">Completed</label>
           </div>
+          <div>
           <button type="submit" className="btn btn-primary">Save</button>
+          </div>
         </form>
       );
 }

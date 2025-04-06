@@ -15,7 +15,7 @@ function ContactForm({ initialData , onSubmit}) {
     return (
         <form action="https://formspree.io/f/xeoapjay" method="POST" onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label className="form-label">First Name:</label>
+            <label className="fs-5 fw-bold form-label">First Name:</label>
             <input
               type="text"
               name="firstName"
@@ -26,7 +26,7 @@ function ContactForm({ initialData , onSubmit}) {
             />
           </div>
           <div className="mb-3">
-            <label className="form-label">Last Name:</label>
+            <label className="fs-5 fw-bold form-label">Last Name:</label>
             <input
               type="text"
               name="lastName"
@@ -37,7 +37,7 @@ function ContactForm({ initialData , onSubmit}) {
             />
           </div>
           <div className="mb-3">
-            <label className="form-label">Email:</label>
+            <label className="fs-5 fw-bold form-label">Email:</label>
             <input
               type="email"
               name="email"
@@ -47,7 +47,7 @@ function ContactForm({ initialData , onSubmit}) {
             />
           </div>
           <div className="mb-3">
-            <label className="form-label">Comments:</label>
+            <label className="fs-5 fw-bold form-label">Comments:</label>
             <input
               type="text"
               name="comments"
@@ -56,7 +56,9 @@ function ContactForm({ initialData , onSubmit}) {
               onChange={handleChange}
             />
           </div> 
+          <div>
           <button type="submit" className="btn btn-primary">Save</button>
+          </div>
         </form>
       );
 }

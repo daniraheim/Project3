@@ -22,7 +22,7 @@ function TaskItems({tasks , onDelete})
         <div className="table-responsive mt-4">
           <table className="table table-bordered table-info">
             <thead className="table-dark">
-              <tr className="table-warning">
+              <tr className="text-center fs-4 table-warning">
                 <th>Task</th>
                 <th>Description</th>
                 <th>Status</th>
